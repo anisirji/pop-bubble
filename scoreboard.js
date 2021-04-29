@@ -1,8 +1,7 @@
 function ScoreBoard(x, y) {
-  // position
   this.x = x;
   this.y = y;
-  // initial score
+
   this.score = 0;
 
   this.display = function () {

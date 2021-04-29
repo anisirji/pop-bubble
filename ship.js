@@ -1,13 +1,12 @@
 function Ship(x, y) {
-  // ship position
   this.x = x;
   this.y = y;
-  // width and height
-  this.width = 25;
-  this.height = 50;
+
+  this.width = 50;
+  this.height = 100;
 
   this.display = function () {
-    fill(color(255, 43, 12, 50));
+    fill(color(25, 243, 102, 50));
     stroke(0);
     strokeWeight(1);
     triangle(
@@ -20,15 +19,13 @@ function Ship(x, y) {
     );
   };
 
-  // update position based on mouseX
   this.updatePosition = function () {
     this.x = mouseX;
     this.y = height - 10;
   };
 
-  // shoot a projectile
   this.shoot = function () {
-    projectile = new Bubble(this.x, this.y - 50, 10, -10, 0, 0);
+    projectile = new Bubble(this.x, this.y - 50, 20, -10, "red", 0);
     return projectile;
   };
 }
